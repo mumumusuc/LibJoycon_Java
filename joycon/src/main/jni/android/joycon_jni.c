@@ -1,5 +1,6 @@
-#include "Joycon_jni.h"
-#include "include/joycon.h"
+#include "joycon_jni.h"
+#include "joycon.h"
+#include "jni_utils.h"
 #include <android/log.h>
 #include <errno.h>
 #include <string.h>
@@ -10,9 +11,6 @@
 #include <android/asset_manager_jni.h>
 
 #define TAG         "joycon_jni"
-
-#include "include/jni_utils.h"
-
 static struct jc_dev {
     joycon_t jc;
     uint8_t *input_buffer;
